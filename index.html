@@ -9,10 +9,10 @@
 <body>
 
 <div class="container">
-    <div class="login-container">
+    <div class="login-container" id="loginContainer">
         <img src="logo.png" alt="Logo" class="logo">
-        <!-- <h2>Sign-In</h2> -->
-        <form>
+
+        <form onsubmit="return login()">
             <label for="email">Email or mobile phone number</label>
             <input type="text" id="email" name="email" required>
 
@@ -20,7 +20,7 @@
             <input type="password" id="password" name="password" required>
 
             <button type="submit">Sign-In</button>
-            <br>
+            
             <div class="info">
                 <a href="#">Forgot your password?</a>
             </div>
@@ -28,11 +28,38 @@
 
         <div class="new-to-amazon">
             <hr>
-            <p></p>
-            <a href="#">Register</a>
+            <p>New to Awacon?</p>
+            <a href="#" onclick="showRegister()">Register</a>
         </div>
     </div>
+
+    <div class="dashboard-container" id="dashboardContainer" style="display: none;">
+        <h2>Welcome to the Dashboard!</h2>
+        <div class="tabs">
+            <button onclick="switchTab(1)">Tab 1</button>
+            <button onclick="switchTab(2)">Tab 2</button>
+            <button onclick="switchTab(3)">Tab 3</button>
+        </div>
+        <div id="tabContent" class="tab-content"></div>
+        <a href="#" onclick="logout()">Logout</a>
+    </div>
+
+    <div class="register-container" id="registerContainer" style="display: none;">
+        <h2>Register for Awacon</h2>
+        <form onsubmit="return register()">
+            <label for="newEmail">Email</label>
+            <input type="text" id="newEmail" name="newEmail" required>
+
+            <label for="newPassword">Password</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+
+            <button type="submit">Register</button>
+        </form>
+        <a href="#" onclick="showLogin()">Back to Login</a>
+    </div>
 </div>
+
+<script src="scripts.js"></script>
 
 </body>
 </html>
