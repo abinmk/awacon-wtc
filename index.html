@@ -3,39 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awacon</title>
     <link rel="stylesheet" href="styles.css">
-    <title>AWACON WTC</title>
-    <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body>
 
-<div id="app">
-    <!-- Login Page -->
-    <div id="loginPage" class="page">
-        <div class="center">
-            <img src="logo.png" alt="Logo" class="logo">
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
-            <button onclick="login()">Login</button>
-            <button onclick="login()">Sign Up</button>
-        </div>
-    </div>
+<div class="container">
+    <div class="login-container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <!-- <h2>Sign-In</h2> -->
+        <form>
+            <label for="email">Email or mobile phone number</label>
+            <input type="text" id="email" name="email" required>
 
-    <!-- Dashboard Page -->
-    <div id="dashboardPage" class="page hidden">
-        <div class="center">
-            <img src="logo.png" alt="Logo" class="logo">
-            <h2>Dashboard</h2>
-            <div class="tabs">
-                <button onclick="switchTab(1)" class="tab">System Details</button>
-                <button onclick="switchTab(2)" class="tab">Control Options</button>
-                <button onclick="switchTab(3)" class="tab">Calibration Data</button>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Sign-In</button>
+            <br>
+            <div class="info">
+                <a href="#">Forgot your password?</a>
             </div>
-            <div id="tabContent" class="tab-content"></div>
+        </form>
+
+        <div class="new-to-amazon">
+            <hr>
+            <p></p>
+            <a href="#">Register</a>
         </div>
     </div>
 </div>
 
-<script src="scripts.js"></script>
 </body>
 </html>
