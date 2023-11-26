@@ -1,0 +1,113 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #e6e8f2;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.page {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(239, 235, 235, 0.1);
+  margin: 0 auto; /* Center the login and dashboard pages */
+  text-align: center; /* Center the content */
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Color Scheme */
+#loginPage {
+  background: linear-gradient(to bottom, #edf1f4, #ebeff3); /* Navy Blue Gradient */
+  color: #fff; /* White */
+}
+
+#dashboardPage {
+  background: linear-gradient(to bottom, #ff6600, #003366); /* Orange to Navy Blue Gradient */
+  color: #fff; /* White */
+}
+
+.logo {
+  max-width: 60%;
+  height: auto;
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+button {
+  background-color: #ff6600; /* Orange */
+  color: #fff; /* White */
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 8px; /* Adjust margin-top to create spacing between input and button */
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #cc5500; /* Darker Orange on hover */
+}
+
+/* Styling for Tabs */
+.tabs {
+  display: flex;
+  flex-wrap: wrap; /* Allow tabs to wrap to the next line on small screens */
+  margin-top: 10px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  background-color: #ff8533; /* Lighter Orange */
+  color: #fff;
+  border: none;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab:hover {
+  background-color: #cc6600; /* Darker Orange on hover */
+}
+
+/* Styling for Tab Content */
+.tab-content {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+}
+
+/* Mobile View Styles */
+@media only screen and (max-width: 600px) {
+  .page {
+    width: 100%; /* Full width on small screens */
+    border-radius: 0; /* No border radius on small screens */
+  }
+
+  .logo {
+    max-width: 80%; /* Increase logo size on small screens */
+  }
+
+  .tabs {
+    flex-direction: column; /* Stack tabs vertically on small screens */
+  }
+
+  .tab {
+    flex: none; /* Take up full width on small screens */
+    margin-bottom: 5px; /* Add spacing between tabs on small screens */
+  }
+}
