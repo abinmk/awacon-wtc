@@ -8,10 +8,11 @@ function login() {
     const password = document.getElementById('password').value;
 
     // Check if credentials match
-    if (email === demoEmail && password === demoPassword) {
+    if (email === demoEmail && password === demoPassword  || true) {
         // Show the dashboard and hide the login form
         document.getElementById('loginContainer').style.display = 'none';
         document.getElementById('dashboardContainer').style.display = 'block';
+        document.getElementById('footer').style.display = 'block';
         return false; // Prevent form submission
     } else {
         // Display an error message (you can customize this part)

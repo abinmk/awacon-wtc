@@ -35,13 +35,13 @@
 
     <div class="dashboard-container" id="dashboardContainer" style="display: none;">
         <h2>Welcome to the Dashboard!</h2>
-        <div class="tabs">
-            <button onclick="switchTab(1)">Tab 1</button>
-            <button onclick="switchTab(2)">Tab 2</button>
-            <button onclick="switchTab(3)">Tab 3</button>
-        </div>
-        <div id="tabContent" class="tab-content"></div>
         <a href="#" onclick="logout()">Logout</a>
+        <div id="tabContent" class="tab-content"></div>
+        <div class="footer">
+            <img src="icon1.png" alt="Tab 1" onclick="switchTab(1)">
+            <img src="controls.png" alt="Tab 2" onclick="switchTab(2)">
+            <img src="settings.png" alt="Tab 3" onclick="switchTab(3)">
+        </div>
     </div>
 
     <div class="register-container" id="registerContainer" style="display: none;">
